@@ -100,7 +100,8 @@
 
 - 請建立一個有 UILabel , UITextField , UIButton 元件的畫面，並且自行設定位置
 ![圖片1](lesson1_HW01.png)
- - UITextField 可以輸入文字
+
+- UITextField 可以輸入文字
 ![圖片2](lesson1_HW02.png)
 
 - UIButton 按下去後，可以改變 UILabel 的文字
