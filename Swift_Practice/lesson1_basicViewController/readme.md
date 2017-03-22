@@ -20,9 +20,24 @@
 	@property (nonatomic , strong) UIButtin *button
 	
 	// swift
-	strong
+	var button: UIButton!
 	
 	```
+- property 中的 ? 以及 ! 的用法
+
+	如果你確定你的 property 不可能會是 nil 值，那就直接用 ```!``` ，如下：
+	
+	```
+	var button1: UIButton!
+	
+	```
+	如果你確定你的 property 有可能會是 nil 值，那就直接用 ```?``` ，如下：
+	
+	```
+	var button1: UIButton?
+	
+	```
+
 - function 要用```func```開頭
 
 	如：
@@ -46,4 +61,47 @@
 	```
 - if else 不用 () 
 
+	如：
 	
+	```
+	if	x == nil {
+	
+	}
+	
+	```
+	但是不能寫成
+	
+	```
+	if	x {
+	    // 這是編譯不過的，因為 if 之後一定要是判斷式
+	}
+	```
+	
+- switch case 沒有 break （ swifch case 的用法後面在補充，他有很多可擴充的用法 ）
+	如：
+	
+	```
+	let vegetable = "red pepper"
+	switch vegetable {
+		case "celery":
+			let vegetableComment = "Add some raisins and make ants on a log."
+		case "cucumber", "watercress":
+			let vegetableComment = "That would make a good tea sandwich."
+		case let x where x.hasSuffix("pepper"):
+			let vegetableComment = "Is it a spicy \(x)?"
+		default:
+    		let vegetableComment = "Everything tastes good in soup."
+}
+	```
+	
+- swift 中取代 #pragma mark 的方法是用 // MARK: ，可參考[這篇文章](http://stackoverflow.com/questions/24017316/pragma-mark-in-swift)
+
+# Lesson 1 作業
+
+- 請建立一個有 UILabel , UITextField , UIButton 元件的畫面，並且自行設定位置
+![圖片1](lesson1_HW01.png)
+ - UITextField 可以輸入文字
+![圖片2](lesson1_HW02.png)
+
+- UIButton 按下去後，可以改變 UILabel 的文字
+![圖片3](lesson1_HW03.png)
