@@ -64,7 +64,7 @@
 	如：
 	
 	```
-	if	x == nil {
+	if x == nil {
 	
 	}
 	
@@ -72,8 +72,9 @@
 	但是不能寫成
 	
 	```
-	if	x {
+	if x {
 	    // 這是編譯不過的，因為 if 之後一定要是判斷式
+	    // 因此 objective-c 直接寫變數不用寫判斷式的方式是不允許的
 	}
 	```
 	
@@ -91,7 +92,7 @@
 			let vegetableComment = "Is it a spicy \(x)?"
 		default:
     		let vegetableComment = "Everything tastes good in soup."
-}
+	}
 	```
 	
 - swift 中取代 #pragma mark 的方法是用 // MARK: ，可參考[這篇文章](http://stackoverflow.com/questions/24017316/pragma-mark-in-swift)
