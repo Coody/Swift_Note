@@ -98,11 +98,10 @@
 
 # Lesson 1 作業
 
-- 請建立一個有 UILabel , UITextField , UIButton 元件的畫面，並且自行設定位置
+- 請建立一個有 UILabel , UITextField , UIButton 元件的畫面，並且自行設定位置。
+- UITextField 可以輸入文字。
+- UIButton 按下去後，可以改變 UILabel 的文字。
+- 作業程式碼在 branch Lesson_1_HW1 , 可以切到該分支看程式碼。
 ![圖片1](lesson1_HW01.png)
-
-- UITextField 可以輸入文字
 ![圖片2](lesson1_HW02.png)
-
-- UIButton 按下去後，可以改變 UILabel 的文字
 ![圖片3](lesson1_HW03.png)
