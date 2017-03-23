@@ -7,6 +7,11 @@
 - 教學一開始的專案內容會是空的（或是有錯誤），請自行修改後再自行編譯看看是否正確。
 - 如果要看解答，請直接轉到該 Lesson 的 branch 來看解答。
 
+# 課程
+* [Lesson 1 基本概念、ViewController 及 UIKit ](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson1_basicViewController)
+* [Lesson 2 Debegate && Extensions(Category) ]()
+* ...
+
 # 學習資源
 [Swift 中文教學](https://tommy60703.gitbooks.io/swift-language-traditional-chinese/content/chapter1/chapter1.html) <- 版本可能舊一點，但初學語法或是問題查詢應該沒啥大問題
 
