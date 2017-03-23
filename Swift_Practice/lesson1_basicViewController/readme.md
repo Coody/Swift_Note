@@ -97,7 +97,7 @@
 	```
 	
 - swift 中取代 #pragma mark 的方法是用 // MARK: ，可參考[這篇文章](http://stackoverflow.com/questions/24017316/pragma-mark-in-swift)
-
+- 同上，更好的方法是用 extension （如 objective-c 中的 category ） 來切開功能！（上面文章中很多人推薦此方法！）
 # Lesson 1 作業
 
 - 請建立一個有 UILabel , UITextField , UIButton 元件的畫面，並且自行設定位置。
