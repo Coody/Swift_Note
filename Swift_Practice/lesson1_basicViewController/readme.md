@@ -48,6 +48,7 @@
 		print("Hello Baby!!");
 	}
 	```
+- ```@selector``` 變成 ```#selector```
 	
 - 覆寫要用```override```
 
@@ -102,9 +103,21 @@
 - 請建立一個有 UILabel , UITextField , UIButton 元件的畫面，並且自行設定位置。
 - UITextField 可以輸入文字。
 - UIButton 按下去後，可以改變 UILabel 的文字。
-- 作業程式碼在 branch Lesson_1_HW1 , 可以切到該分支看程式碼。
+- 作業完整程式碼在 branch Lesson_1_HW1 ，可以切到該分支看程式碼，請自行手動練習後再切過去看！！！
 -
 
 ![圖片1](lesson1_HW01.png)
 ![圖片2](lesson1_HW02.png)
 ![圖片3](lesson1_HW03.png)
+
+# 在 Lesson 1 你應該學到
+
+- 使用 xcode 建立一個 single viewController 的 App
+- 如何建立類別的 property
+- UIKit 元件使用，以及其內部屬性的使用
+- 如何建立按鈕響應回呼函式
+- function 的建立
+
+# License
+MIT
+
