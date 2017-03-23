@@ -4,7 +4,7 @@
 - 不使用 storyboard 來建立 App 。
 - 每個 Lesson 內的資料夾有自己的 readme.md 可以看上面的教學以及提示筆記，每個課程都會包含一個以上的小專案（或是延續專案）。
 # How To Use 
-- 此教學適用於已經熟悉 [macOS] 、 [xcode] 、以及 [Objective-C] 然後要轉換成 [Swift] 的人。
+- 此教學適用於已經熟悉 [macOS]() 、 [xcode]() 、以及 [Objective-C]() 然後要轉換成 [Swift]() 的人。
 - 教學一開始的專案內容會是空的（或是有錯誤），請自行修改後再自行編譯看看是否正確。
 - 如果要看解答，請直接轉到該 Lesson 的 branch 來看解答。
 
