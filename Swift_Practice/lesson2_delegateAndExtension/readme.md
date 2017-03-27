@@ -1,3 +1,4 @@
+-
 # Lesson 2 Protocol && Extensions( Category )
 
 * [Extensions 參考資料](http://stackoverflow.com/questions/24142829/how-to-create-swift-class-for-category)
@@ -32,15 +33,15 @@ class ViewController: UIViewController{
 }
 ```
 
-
+-
 # Lesson 2 作業
 
--
 
+-
 # 在 Lesson 2 你應該學到
 
 
-
+-
 # License
 MIT
 
