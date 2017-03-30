@@ -3,7 +3,29 @@
 
 ## Protocol
 
+* 例子：
+
+```
+// 寫法
+protocol SomeProtocol {
+    // protocol definition goes here
+}
+
+// 在 struct 中使用
+struct SomeStructure: FirstProtocol, AnotherProtocol {
+    // structure definition goes here
+}
+
+// 在 class 中使用
+class SomeClass: SomeSuperclass, FirstProtocol, AnotherProtocol {
+    // class definition goes here
+}
+
+```
+
+* 可以在 Protocol 中使用 property ，甚至可以使用 static property
 * 
+* [官方 Protocol 文件](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html)
 * 
 
 
@@ -49,11 +71,28 @@ class ViewController: UIViewController{
 
 * 先要了解初始化怎麼寫，那就要搞懂```designated init```以及```convenience init```，請看這篇 [designated init 以及 convenience init 的差別](http://jason9075.logdown.com/posts/285685-swift-note-initialization-rules-convenience-and-designated-initializer-usage)。
 * [What are convenience required initializers in Swift?](http://stackoverflow.com/questions/26922694/what-are-convenience-required-initializers-in-swift)
+* 三個規則：
+	* designated init 必須自行呼叫 super 的 designated init 。
+	* convenience init 必須呼叫其他的 init 方法。
+	* convenience init 最終必須呼叫 designated init 方法。
+	* 我的感覺：這有點類似我們在寫類別的介面時，會開出很多方法讓外部使用，但是內部實作時，最終都會導到同一個方法來實作的感覺。
+* 簡單來說， convenience init 就字面上的意思就是「方便使用」的 init， designated init 就字面上就是最終設計來初始化的方法。
+* 由上面的解釋可以知道， designated init 是最重要的，因此你在實作 designated init 時，請記得要把所有此 class 的 properties 都要 initialized ，[可以看看這篇的人所問的問題](http://stackoverflow.com/questions/24521876/swift-subclassing-how-to-override-init)。
+* 繼承 ViewController 的初始化方法請用 convenience initializers 的方法來實作。如：
+
+```
+class ViewController: UIViewController {
+    convenience init() {
+        self.init()
+    }
+}
+```
+
 
 # 補充2: 再論 func 中的 _
 
 * swift 的  func 命名類似 Objective-C 的命名，所有 param 都可以寫個讓你知道使用這個方法時，該傳入什麼參數。
-* 但有沒有可能我們有時候不想寫參數名稱，讓使用此方法的人直接類似 c++ 船值的方式就好？有！因此 _ 就產生了。
+* 但有沒有可能我們有時候不想寫參數名稱，讓使用此方法的人直接類似 c++ 傳值的方式就好？有！因此 _ 就產生了。
 * 例子：
 
 ```
