@@ -1,6 +1,17 @@
 -
 # Lesson 2 Protocol && Extensions( Category )
 
+## Protocol
+
+* 
+* 
+
+## Delegate
+
+* 
+* [Examples of Delegates in Swift 3](http://stackoverflow.com/questions/40501780/examples-of-delegates-in-swift-3)
+
+## Extensions
 * [Extensions 參考資料](http://stackoverflow.com/questions/24142829/how-to-create-swift-class-for-category)
 * Extensions 就是 Objective-c 中的 Category ，但是更強大且簡易
 * Extension 只要被寫出來，不用 import 也可以使用，如：
@@ -67,6 +78,9 @@ myFunc( "Milo" , "I'm a really old wizard" )  // 第二個 param 可以不用 ag
 -
 # 在 Lesson 2 你應該學到
 
+1. Protocol 基本用法
+2. Delegate 基本用法
+3. Category 基本用法
 
 -
 # License
