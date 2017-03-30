@@ -1,15 +1,11 @@
--
-# Lesson 2 Protocol && Extensions( Category )
+
+# Lesson 2 Protocol , Extensions( Category ) , Delegate
 
 ## Protocol
 
 * 
 * 
 
-## Delegate
-
-* 
-* [Examples of Delegates in Swift 3](http://stackoverflow.com/questions/40501780/examples-of-delegates-in-swift-3)
 
 ## Extensions
 * [Extensions 參考資料](http://stackoverflow.com/questions/24142829/how-to-create-swift-class-for-category)
@@ -44,10 +40,15 @@ class ViewController: UIViewController{
 }
 ```
 
+## Delegate
+
+* 
+* [Examples of Delegates in Swift 3](http://stackoverflow.com/questions/40501780/examples-of-delegates-in-swift-3)
+
 # 補充1: 使用 code 進入 ViewController
 
 * 先要了解初始化怎麼寫，那就要搞懂```designated init```以及```convenience init```，請看這篇 [designated init 以及 convenience init 的差別](http://jason9075.logdown.com/posts/285685-swift-note-initialization-rules-convenience-and-designated-initializer-usage)。
-* 
+* [What are convenience required initializers in Swift?](http://stackoverflow.com/questions/26922694/what-are-convenience-required-initializers-in-swift)
 
 # 補充2: 再論 func 中的 _
 
@@ -74,7 +75,7 @@ myFunc( "Milo" , "I'm a really old wizard" )  // 第二個 param 可以不用 ag
 -
 # Lesson 2 作業
 
-* 接續 Lesson 1 的作業，請使用今天教的方式做一的 view 的類別，並且使用 delegate 設計模式。
+* 接續 Lesson 1 的作業，請使用今天教的方式做一的 view 的類別，包含作業 1 的畫面，並且使用 delegate 設計模式讓 ViewController 使用 delegate 來處理流程。
 * 接續 Lesson 1 的作業， ViewController 請用 category 實作 View 的回呼功能。
 
 
