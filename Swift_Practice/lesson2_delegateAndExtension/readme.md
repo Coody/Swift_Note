@@ -33,6 +33,33 @@ class ViewController: UIViewController{
 }
 ```
 
+# 補充1: 使用 code 進入 ViewController
+
+* 先要了解初始化怎麼寫，那就要搞懂```designated init```以及```convenience init```，請看這篇 [designated init 以及 convenience init 的差別](http://jason9075.logdown.com/posts/285685-swift-note-initialization-rules-convenience-and-designated-initializer-usage)。
+* 
+
+# 補充2: 再論 func 中的 _
+
+* swift 的  func 命名類似 Objective-C 的命名，所有 param 都可以寫個讓你知道使用這個方法時，該傳入什麼參數。
+* 但有沒有可能我們有時候不想寫參數名稱，讓使用此方法的人直接類似 c++ 船值的方式就好？有！因此 _ 就產生了。
+* 例子：
+
+```
+// 不使用 _
+func myFunc( name:String , age:String ){
+}
+
+myFunc( "Milo" , age: "I'm a really old wizard" ) // 為何第一個可以不用？因為第一個 param 內建 _
+
+// 使用 _ 
+func myFunc(name:String, _ age:String){
+}
+
+myFunc( "Milo" , "I'm a really old wizard" )  // 第二個 param 可以不用 age:"ooxx" 了
+
+```
+* 詳細可以看這篇 [What is _: in Swift telling me?](http://stackoverflow.com/questions/30876068/what-is-in-swift-telling-me)
+
 -
 # Lesson 2 作業
 
