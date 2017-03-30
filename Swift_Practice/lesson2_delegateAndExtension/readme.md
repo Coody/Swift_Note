@@ -79,6 +79,7 @@ class ViewController: UIViewController{
 
 }
 ```
+* [官方 Extension 範例](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html)
 
 ## Delegate
 
