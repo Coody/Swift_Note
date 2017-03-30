@@ -74,6 +74,9 @@ myFunc( "Milo" , "I'm a really old wizard" )  // 第二個 param 可以不用 ag
 -
 # Lesson 2 作業
 
+* 接續 Lesson 1 的作業，請使用今天教的方式做一的 view 的類別，並且使用 delegate 設計模式。
+* 接續 Lesson 1 的作業， ViewController 請用 category 實作 View 的回呼功能。
+
 
 -
 # 在 Lesson 2 你應該學到
