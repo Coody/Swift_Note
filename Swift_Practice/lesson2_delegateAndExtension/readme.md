@@ -34,9 +34,17 @@ protocol SomeProtocol {
 // { get set } 表示 gettable , 以及 settable
 // { get } 表示 gettable
 ```
+* Protocol 中的 optional 用法如下（ swift 3.x ），[詳細請看此](http://stackoverflow.com/questions/24032754/how-to-define-optional-methods-in-swift-protocol)：
+
+```
+@objc protocol CounterDataSource {
+    @objc optional func increment(forCount count: Int) -> Int
+    @objc optional var fixedIncrement: Int { get }
+}
+// 感覺 swift 沒有 optional 的方法，只要訂出來都必須要實作。
+```
 
 * [官方 Protocol 文件](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html)
-* 
 
 
 ## Extensions
@@ -74,7 +82,69 @@ class ViewController: UIViewController{
 
 ## Delegate
 
-* 
+* 使用 Protocol 開出介面
+* 裡面有個變數為
+
+```
+var delegate:OoxxDelegate?
+```
+
+* 方法使用
+
+```
+private func pressedBtn(_ sender:AnyObject ){
+	delegate?.pressedBtn( sender )
+}
+```
+
+* Class 使用 Delegate 設計模式的例子：
+
+```
+// here is the protocol for creating the delegation:
+protocol AudioPlayerDelegate {
+    func playPauseDidTap()
+    func playlistDidTap()
+}
+
+class AudioPlayerView: UIView {
+    //MARK:- IBOutlets
+    @IBOutlet weak private var btnPlayPause: UIButton!
+    @IBOutlet weak private var btnPlaylist: UIButton!
+
+    // MARK:- Delegate
+    var delegate:AudioPlayerDelegate?
+
+    // IBActions
+    @IBAction private func playPauseTapped(_ sender: AnyObject) {
+        delegate?.playPauseDidTap()
+    }
+
+    @IBAction private func playlistTapped(_ sender: AnyObject) {
+        delegate?.playlistDidTap()
+    }
+}
+```
+
+* ViewController 使用此類別的例子：
+
+```
+class ViewController: UIViewController {
+
+}
+
+extension ViewController: AudioPlayerDelegate {
+    func playPauseDidTap() {
+        print("play/pause tapped!!")
+    }
+
+    func playlistDidTap() {
+        // note that is should do a different behavior in each viewController...
+        print("list tapped!!")
+    }
+}
+
+```
+
 * [Examples of Delegates in Swift 3](http://stackoverflow.com/questions/40501780/examples-of-delegates-in-swift-3)
 
 # 補充1: 使用 code 進入 ViewController
@@ -88,7 +158,7 @@ class ViewController: UIViewController{
 	* 我的感覺：這有點類似我們在寫類別的介面時，會開出很多方法讓外部使用，但是內部實作時，最終都會導到同一個方法來實作的感覺。
 * 簡單來說， convenience init 就字面上的意思就是「方便使用」的 init， designated init 就字面上就是最終設計來初始化的方法。
 * 由上面的解釋可以知道， designated init 是最重要的，因此你在實作 designated init 時，請記得要把所有此 class 的 properties 都要 initialized ，[可以看看這篇的人所問的問題](http://stackoverflow.com/questions/24521876/swift-subclassing-how-to-override-init)。
-* 繼承 ViewController 的初始化方法請用以下的寫法來實作。如：
+* 繼承 ViewController 的初始化方法請用以下的寫法來實作，[詳細可看這](http://stackoverflow.com/questions/26923003/how-do-i-make-a-custom-initializer-for-a-uiviewcontroller-subclass-in-swift)，寫法如下：
 
 ```
 class ViewController: UIViewController {
