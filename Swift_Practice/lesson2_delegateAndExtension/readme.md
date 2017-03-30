@@ -24,7 +24,17 @@ class SomeClass: SomeSuperclass, FirstProtocol, AnotherProtocol {
 ```
 
 * 可以在 Protocol 中使用 property ，甚至可以使用 static property
-* 
+* 使用方式：
+
+```
+protocol SomeProtocol {
+    var mustBeSettable: Int { get set }
+    var doesNotNeedToBeSettable: Int { get }
+}
+// { get set } 表示 gettable , 以及 settable
+// { get } 表示 gettable
+```
+
 * [官方 Protocol 文件](https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html)
 * 
 
@@ -78,12 +88,21 @@ class ViewController: UIViewController{
 	* 我的感覺：這有點類似我們在寫類別的介面時，會開出很多方法讓外部使用，但是內部實作時，最終都會導到同一個方法來實作的感覺。
 * 簡單來說， convenience init 就字面上的意思就是「方便使用」的 init， designated init 就字面上就是最終設計來初始化的方法。
 * 由上面的解釋可以知道， designated init 是最重要的，因此你在實作 designated init 時，請記得要把所有此 class 的 properties 都要 initialized ，[可以看看這篇的人所問的問題](http://stackoverflow.com/questions/24521876/swift-subclassing-how-to-override-init)。
-* 繼承 ViewController 的初始化方法請用 convenience initializers 的方法來實作。如：
+* 繼承 ViewController 的初始化方法請用以下的寫法來實作。如：
 
 ```
 class ViewController: UIViewController {
     convenience init() {
-        self.init()
+        self.init(imageURL: nil)
+    }
+    
+    init(imageURL: NSURL?) {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    // xcode 7 && 8
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 }
 ```
@@ -111,7 +130,7 @@ myFunc( "Milo" , "I'm a really old wizard" )  // 第二個 param 可以不用 ag
 ```
 * 詳細可以看這篇 [What is _: in Swift telling me?](http://stackoverflow.com/questions/30876068/what-is-in-swift-telling-me)
 
--
+
 # Lesson 2 作業
 
 * 接續 Lesson 1 的作業，請使用今天教的方式做一的 view 的類別，包含作業 1 的畫面，並且使用 delegate 設計模式讓 ViewController 使用 delegate 來處理流程。
