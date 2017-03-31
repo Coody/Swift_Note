@@ -18,6 +18,8 @@
 
 [Swift 可重複使用的的簡單範例](https://github.com/SwiftCarlos/Swift) <- 推薦
 
+[Swift 設計模式](http://stackoverflow.com/documentation/swift/4941/design-patterns-creational#t=201703082128483852321) <- 推薦
+
 [Apple 官方 Developer 資源](https://developer.apple.com/swift/resources/) <- 各種資源網址以及新消息
 
 [Apple's 官方文件](https://developer.apple.com/library/prerelease/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309) <- 詳細導讀或是查詢資料用
