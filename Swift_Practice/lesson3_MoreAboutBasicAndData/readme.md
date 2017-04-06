@@ -60,7 +60,7 @@ for unit in objectArray_1 {
 * 定義 Dictionary 的方式有兩種，一種是```ooxxDic: Dictionary< Type , Type >```，另一種是中括號```ooxxDic: [Type : Type]```：
 
 ```
-var objectDic_1: Dictionary< String : Int >
+var objectDic_1: Dictionary< String , Int >
 var objectDic_2: [ String : Int ]
 ```
 
