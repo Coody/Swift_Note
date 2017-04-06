@@ -1,21 +1,21 @@
 # update time
-Create date: 2017/03/22 Swift 3 版本
-Update date: 2017/04/06
+* Create date: 2017/03/22 Swift 3 版本
+* Update date: 2017/04/06
 
 # Swift_Note
-- 為了教學而作的筆記。
-- 以製作 App 為教學方向。
-- 不使用 storyboard 來建立 App 。
-- 每個 Lesson 內的資料夾有自己的 readme.md 可以看上面的教學以及提示筆記，每個課程都會包含一個以上的小專案（或是延續專案）。
+* 為了教學而作的筆記。
+* 以製作 App 為教學方向。
+* 不使用 storyboard 來建立 App 。
+* 每個 Lesson 內的資料夾有自己的 readme.md 可以看上面的教學以及提示筆記，每個課程都會包含一個以上的小專案（或是延續專案）。
 # How To Use 
-- 此教學適用於已經熟悉 [macOS]() 、 [xcode]() 、以及 [Objective-C]() 然後要轉換成 [Swift]() 的人。
-- 教學一開始的專案內容會是空的（或是有錯誤），請自行修改後再自行編譯看看是否正確。
-- 如果要看解答，請直接轉到該 Lesson 的 branch 來看解答。
+* 此教學適用於已經熟悉 [macOS]() 、 [xcode]() 、以及 [Objective-C]() 然後要轉換成 [Swift]() 的人。
+* 教學一開始的專案內容會是空的（或是有錯誤），請自行修改後再自行編譯看看是否正確。
+* 如果要看解答，請直接轉到該 Lesson 的 branch 來看解答。
 
 # 課程
 * [Lesson 1 基本概念、ViewController 及 UIKit ](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson1_basicViewController)
 * [Lesson 2 Protocol , Extensions(Category) , Delegate ](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson2_delegateAndExtension)
-* [Lesson 3 Array , Dictionary , Set , 再論 var ]()
+* [Lesson 3 Array , Dictionary , Set , 再論 var ](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson3_MoreAboutBasicAndData)
 * ...
 
 # 學習資源
