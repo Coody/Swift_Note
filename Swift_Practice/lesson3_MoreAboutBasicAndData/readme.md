@@ -132,6 +132,7 @@ var objectSet: Set<Int>
 var objectSet: Set<Int> = [ 5,6,7 ]
 ```
 
+* 跟陣列使用上有點像，但能夠有數學集合的功能！[詳細請看此](https://itisjoe.gitbooks.io/swiftgo/content/ch1/collection_types.html)。
 
 ## 再論 var
 
