@@ -173,7 +173,7 @@ let twoString: String! = "Good night ."
 let finalString: String = twoString
 ```
 
-* 為何要使用這些方式呢？簡單來說就是要解決變數沒有值的問題（包含一邊變數，如： int 等......），在 swift 中，他為了安全，所以要求所有變數都要有值，而他使用了 Optional 的方式來達成，這個 Optional 可以想像成是一個 enum，如下： 
+* 為何要使用這些方式呢？簡單來說就是要解決變數沒有值的問題（包含一般變數，如： int , float 等......），在 swift 中，他為了安全，所以要求所有變數都要有值，而他使用了 Optional 的方式來達成，這個 Optional 可以想像成是一個 enum，如下：
 
 ```
 // slightly simplified
