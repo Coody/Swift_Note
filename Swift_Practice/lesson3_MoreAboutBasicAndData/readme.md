@@ -219,14 +219,12 @@ enum Optional {
 * 試著將此資料顯示在 TableView 上面，左邊為 Key , 右邊為 Value 。
 * 當按下按鈕，使用 Set 集合的功能來比對出同樣生日的學生（請自行設定幾個學生影同樣的生日），並且更新 TableView。
 
--
 # 在 Lesson 3 你應該學到
 
 1. Array , Dictionary , Set 基本用法
 2. UITableView
 3. 何時使用 ? ! 的概念
 
--
 # License
 MIT
 
