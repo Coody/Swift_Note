@@ -214,15 +214,17 @@ enum Optional {
 
 # Lesson 3 作業
 
-* 
-
+* 請試著用 UITableView 建立一組表格元件、最底下流一個空間放一顆按鈕。
+* 請試著建立學生資料類別的集合，內容為 A 班級、以及 B 班級的學生集合，內部有學號、學生姓名、學生生日。
+* 試著將此資料顯示在 TableView 上面，左邊為 Key , 右邊為 Value 。
+* 當按下按鈕，可以比對出同樣生日的學生（請自行設定幾個學生影同樣的生日），並且更新 TableView。
 
 -
 # 在 Lesson 3 你應該學到
 
 1. Array , Dictionary , Set 基本用法
 2. UITableView
-3. 
+3. 何時使用 ? ! 的概念
 
 -
 # License
