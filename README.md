@@ -1,4 +1,8 @@
-# Swift_Note ( 2017/03/22 Swift 3 版本 )
+# update time
+Create date: 2017/03/22 Swift 3 版本
+Update date: 2017/04/06
+
+# Swift_Note
 - 為了教學而作的筆記。
 - 以製作 App 為教學方向。
 - 不使用 storyboard 來建立 App 。
