@@ -10,8 +10,8 @@
 # How To Use 
 * 此教學適用於已經熟悉 [macOS]() 、 [xcode]() 、以及 [Objective-C]() 然後要轉換成 [Swift]() 的人。
 * 教學一開始的專案內容會是空的（或是有錯誤），請自行修改後再自行編譯看看是否正確。
-* 如果要看解答，請直接轉到該 Lesson 的 branch 來看解答。
-
+* 如果要看該 Lesson 的解答，請直接轉到該 Lesson 的 branch 來看 code 的寫法。
+* 有任何問題，都歡迎在 issue 內直接進行討論。
 # 課程
 * [Lesson 1 基本概念、ViewController 及 UIKit ](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson1_basicViewController)
 * [Lesson 2 Protocol , Extensions(Category) , Delegate ](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson2_delegateAndExtension)
