@@ -57,6 +57,80 @@ for unit in objectArray_1 {
 
 ## Dictionary
 
+* 定義 Dictionary 的方式有兩種，一種是```ooxxDic: Dictionary< Type , Type >```，另一種是中括號```ooxxDic: [Type : Type]```：
+
+```
+var objectDic_1: Dictionary< String : Int >
+var objectDic_2: [ String : Int ]
+```
+
+* 初始化 Dic
+
+```
+objectDic_1 = [ String : Int ]()
+
+// 使用
+objectDic_1.updateValue( 5 , forKey: "Test")
+```
+
+* 定義以及初始化一起用
+
+```
+var objectDic_1: Dictionary< String , Int >! = [ String : Int ]()
+// 或是
+var objectDic_1: [ String : Int ]! = [ String : Int ]()
+```
+
+* 直接清空
+
+```
+objectDic_1 = [:]
+```
+
+* 給值、或是覆蓋、移除
+
+```
+// 沒有此 Key 就會建一個、有此 Key 就會覆蓋
+objectDic_1["Key"] = Value
+
+// 他法
+objectDic_1.updateValue( 123 , forKey: "LHR")
+
+// 移除
+objectDic_1.removeValueForKey( "DUB" )
+```
+
+* 取得 Keys 或是 Values 的陣列
+
+```
+// 取得 Keys
+var someArr1 = [String](objectDic_1.keys)
+
+// 取得 Values
+var someArr1 = [Int](objectDic_1.values)
+```
+
+* for-in
+
+```
+for ( keyunit , valueUnit ) in myDict5 {
+    print( "\(keyunit): \(valueUnit)" )
+}
+```
+
+## Set
+
+* 他跟 Array 差別在他沒有順序、且沒有重複的值。
+* 裡面要相同型別。
+* 定義 Set 、初始化 Set
+
+```
+// 
+var objectSet: Set<Int>
+
+// 初始化
+var objectSet: Set<Int> = [ 5,6,7 ]
+```
 
 
 ## 再論 var
