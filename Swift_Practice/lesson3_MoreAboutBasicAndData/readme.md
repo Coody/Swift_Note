@@ -3,11 +3,61 @@
 
 ## Array
 
-* 初始化：
+* 定義 Array 的方式有兩種，一種是```ooxxArray: Array<Type>```，另一種是中括號```ooxxArray: [Type]```：
 
 ```
+var objectArray_1: Array<Int>
+var objectArray_2: [Int]
+```
+
+* 初始化 Array
 
 ```
+objectArray_1 = [Int]()
+
+// 使用
+objectArray_1.append(5)
+```
+
+* 定義以及初始化一起用
+
+```
+var objArray: Array<Int>? = [Int]()
+// 或是
+var objArray: [Int]? = [Int]()
+```
+
+* 直接清空
+
+```
+objectArray_1 = []
+```
+
+* 特殊給值
+
+```
+objectArray_1 = [2...4] = [5,5,5]
+// 另外......
+objectArray_1 = [2...4] = [5]
+// 這樣會變成 2~4 的 index 全部取代成 index:2 那個的 value:5 ，「單一」一個值喔！（不是 index 2~4 都變成 5,5,5 ）
+```
+
+* for each ，在 swift 是 for-in
+
+```
+var objectArray_1 = [1,2,3,4,5,6,7]
+for unit in objectArray_1 {
+	print("\(unit) , " , terminator:"")
+}
+```
+
+* 補充：如果 print 不要使用 newLine ，請用上面的方式```print( ... , terminator:"" )```，請看這篇文章[print without newline in swift 2](http://stackoverflow.com/questions/30865233/print-without-newline-in-swift-2)。
+
+* 使用其實非常直覺簡單，幾乎可以直接上手，如果想要看文件[可看這](https://itisjoe.gitbooks.io/swiftgo/content/ch1/collection_types.html)。
+
+## Dictionary
+
+
 
 ## 再論 var
 
