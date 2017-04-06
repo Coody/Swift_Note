@@ -136,10 +136,7 @@ var objectSet: Set<Int> = [ 5,6,7 ]
 
 ## 再論 var
 
-* 變數 ? 以及 ! 使用的時機
-	* 如果變數未來可能會是 nil ，那麼就用 ?
-	* 如果此變數不會變成 nil ，那就用 !
-* 參考：[What is the difference between String? and String! (two ways of creating an optional variable)?](http://stackoverflow.com/questions/24083842/what-is-the-difference-between-string-and-string-two-ways-of-creating-an-opti)
+### 變數的別名
 
 * 型別的別名，例：
 
@@ -151,6 +148,15 @@ tyepalias CoodyLabel = UILabel
 var newLabel: CoodyLabel?
 
 ```
+
+### 變數 ? 以及 ! 的概念
+
+* 變數 ? 以及 ! 使用的時機
+	* 如果變數未來可能會是 nil ，那麼就用 ?
+	* 如果此變數不會變成 nil ，那就用 !
+* 參考：[What is the difference between String? and String! (two ways of creating an optional variable)?](http://stackoverflow.com/questions/24083842/what-is-the-difference-between-string-and-string-two-ways-of-creating-an-opti)
+
+
 
 * implicitly unwrapped optional （隱式解析可選型別），如果你不了解這個是什麼，請看下面的「推薦必看1」。
 * 隱式解析可選型別，我個人覺得翻譯的很爛，改成更口語的話，可以說成是「隱含了值的可選型別」，因此如其名，就是他用 ! 代表這個變數有值了（或是應該要有值），所以在使用上，就不用像是一般可選型別（ ? 的寫法）再取值的時後，要額外加上 ! 來取用。例子如下：
