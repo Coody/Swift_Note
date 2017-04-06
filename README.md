@@ -1,6 +1,6 @@
 # update time
 * Create date: 2017/03/22 Swift 3 版本
-* Update date: 2017/04/06
+* Latest Update date: 2017/04/06
 
 # Swift_Note
 * 為了教學而作的筆記。
