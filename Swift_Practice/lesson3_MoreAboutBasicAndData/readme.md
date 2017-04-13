@@ -222,6 +222,8 @@ enum Optional {
 * 上面的結論是我幫大家讀了下面幾個「推薦必看」文章後的心得，所以有空最好還是看一下底下的「推薦必看」！
 * 推薦必看1：[What is an Optional in Swift](https://drewag.me/posts/2014/07/05/what-is-an-optional-in-swift)
 * 推薦必看2：[Uses for Implicitly Unwrapped Optionals in Swift](https://drewag.me/posts/2014/07/05/uses-for-implicitly-unwrapped-optionals-in-swift)
+* 參考：[初學Swift：愛恨交織的 Optional](http://www.appcoda.com.tw/swift-optional/)
+* 參考：[Swift的問號與驚嘆號：可有可無的 Optional](http://www.appcoda.com.tw/swift-optional-intro/)
 * 參考：[Why create "Implicitly Unwrapped Optionals" ?](http://stackoverflow.com/questions/24006975/why-create-implicitly-unwrapped-optionals)
 
 # Lesson 3 作業
