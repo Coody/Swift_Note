@@ -56,12 +56,18 @@ class Lesson2View : UIView {
                                              height:45))
         button.layer.cornerRadius = 5.0
         button.backgroundColor = UIColor.gray
-        button.setTitle("確定", for: UIControlState.normal )
+        button.setTitle("顯示相同生日的學生", for: UIControlState.normal )
         button.setTitleColor(UIColor.blue, for: UIControlState.normal )
     }
         
     // MARK: Response
-    func pressedButton( sender:Any ){
+    /**
+     *
+     * 為何要用 @objc ，請看這篇：
+     * http://stackoverflow.com/questions/25056278/swift-access-control-with-target-selectors
+     *
+     */
+    @objc private func pressedButton( sender:Any ){
         delegate?.pressedButton( sender: sender )
     }
     
