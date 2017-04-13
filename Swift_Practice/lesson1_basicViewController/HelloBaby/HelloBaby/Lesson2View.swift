@@ -14,10 +14,10 @@ protocol Lesson2View_Protocol {
 
 class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
     
-    @available(iOS 2.0, *)
+//    @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        return nil
+        var tableViewCell = ClassmateTableViewCell.init()
+        return tableViewCell
     }
 
     

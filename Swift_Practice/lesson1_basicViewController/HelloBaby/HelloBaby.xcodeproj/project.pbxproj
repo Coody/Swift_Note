@@ -13,6 +13,7 @@
 		FB4FEDC01E7FD5BF00C6001F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4FEDBE1E7FD5BF00C6001F /* LaunchScreen.storyboard */; };
 		FBD392BA1E9DD375001DDC57 /* Lesson2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD392B81E9DD375001DDC57 /* Lesson2View.swift */; };
 		FBD392BB1E9DD375001DDC57 /* Lesson2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD392B91E9DD375001DDC57 /* Lesson2ViewController.swift */; };
+		FBD392BD1E9DD60E001DDC57 /* ClassmateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD392BC1E9DD60E001DDC57 /* ClassmateTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FB4FEDC11E7FD5BF00C6001F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBD392B81E9DD375001DDC57 /* Lesson2View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson2View.swift; sourceTree = "<group>"; };
 		FBD392B91E9DD375001DDC57 /* Lesson2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson2ViewController.swift; sourceTree = "<group>"; };
+		FBD392BC1E9DD60E001DDC57 /* ClassmateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassmateTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FB4FEDB51E7FD5BF00C6001F /* AppDelegate.swift */,
 				FBD392B81E9DD375001DDC57 /* Lesson2View.swift */,
 				FBD392B91E9DD375001DDC57 /* Lesson2ViewController.swift */,
+				FBD392BC1E9DD60E001DDC57 /* ClassmateTableViewCell.swift */,
 				FB4FEDB91E7FD5BF00C6001F /* Main.storyboard */,
 				FB4FEDBC1E7FD5BF00C6001F /* Assets.xcassets */,
 				FB4FEDBE1E7FD5BF00C6001F /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 				FBD392BA1E9DD375001DDC57 /* Lesson2View.swift in Sources */,
 				FB4FEDB61E7FD5BF00C6001F /* AppDelegate.swift in Sources */,
 				FBD392BB1E9DD375001DDC57 /* Lesson2ViewController.swift in Sources */,
+				FBD392BD1E9DD60E001DDC57 /* ClassmateTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
