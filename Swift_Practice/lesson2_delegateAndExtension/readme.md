@@ -207,8 +207,6 @@ myFunc( "Milo" , "I'm a really old wizard" )  // 第二個 param 可以不用 ag
 * 接續 Lesson 1 的作業，請使用今天教的方式做一的 view 的類別，包含作業 1 的畫面，並且使用 delegate 設計模式讓 ViewController 使用 delegate 來處理流程。
 * 接續 Lesson 1 的作業， ViewController 請用 category 實作 View 的回呼功能。
 
-
--
 # 在 Lesson 2 你應該學到
 
 1. Protocol 基本用法
@@ -217,7 +215,6 @@ myFunc( "Milo" , "I'm a really old wizard" )  // 第二個 param 可以不用 ag
 
 [--> 下一課，Lesson 3 Array , Dictionary , Set , 再論 var](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson3_MoreAboutBasicAndData)
 
--
 # License
 MIT
 
