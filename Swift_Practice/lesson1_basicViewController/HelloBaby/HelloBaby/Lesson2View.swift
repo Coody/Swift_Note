@@ -19,10 +19,10 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
         let tempClassmate: Classmate = classroomAArray[indexPath.row]
         var tableViewCell = tableView.dequeueReusableCell(withIdentifier: K_CLASSMATE_TABLEVIEWCELL_IDENTIFY) as! ClassmateTableViewCell?
         if tableViewCell != nil {
-            tableViewCell?.setClassmate(indexPath.row , tempClassmate.name, tempClassmate.classroom, tempClassmate.birthday)
+            tableViewCell?.setClassmate(indexPath.row + 1 , tempClassmate.name, tempClassmate.classroom, tempClassmate.birthday)
         }
         else{
-            tableViewCell = ClassmateTableViewCell.init(classmateSeatNumber:indexPath.row,
+            tableViewCell = ClassmateTableViewCell.init(classmateSeatNumber:indexPath.row + 1,
                                                         classmateName: tempClassmate.name,
                                                         classmateClass: tempClassmate.classroom, 
                                                         classmateBirthday: tempClassmate.birthday)
@@ -30,7 +30,6 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
         return tableViewCell!
     }
 
-    
     @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return classroomAArray.count
