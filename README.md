@@ -19,7 +19,7 @@
 * [Lesson 1 基本概念、ViewController 及 UIKit ](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson1_basicViewController)
 * [Lesson 2 Protocol , Extensions(Category) , Delegate ](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson2_delegateAndExtension)
 * [Lesson 3 Array , Dictionary , Set , 再論 var ](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson3_MoreAboutBasicAndData)
-* [Lesson 4 再論 func , 閉包 ]()
+* [Lesson 4 再論 func , 閉包 ](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson4_DeepFuncAndClosure)
 * <del>[Lesson 5 UITabBarController , UINavigationController]()
 * ...
 
