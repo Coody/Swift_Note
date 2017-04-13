@@ -33,6 +33,12 @@ var objArray: [Int]? = [Int]()
 objectArray_1 = []
 ```
 
+* 兩陣列相加
+
+```
+let objectArray_Total = objectArray_1 + objectArray_2
+```
+
 * 特殊給值
 
 ```
