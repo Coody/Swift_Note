@@ -10,6 +10,8 @@ import UIKit
 
 let K_CLASSMATE_TABLEVIEWCELL_IDENTIFY = "K_CLASSMATE_TABLEVIEWCELL_IDENTIFY"
 
+
+
 class ClassmateTableViewCell: UITableViewCell {
     
     var classmateSeatNumberLabel: UILabel?
@@ -40,7 +42,8 @@ class ClassmateTableViewCell: UITableViewCell {
     
     private func initialClassmateSeatNumber(_ classmateSeatNumber:Int! ){
         if classmateSeatNumberLabel == nil {
-            classmateSeatNumberLabel = UILabel.init(frame: CGRect(x: 12, y: 0, width: 30, height: 45))
+            classmateSeatNumberLabel = UILabel.init(frame: CGRect(x: 12, y: 0, width:self.frame.size.width*0.1, height: 45))
+            classmateSeatNumberLabel!.font = UIFont.systemFont(ofSize: 12.0)
             classmateSeatNumberLabel!.textColor = .black
             classmateSeatNumberLabel!.textAlignment = .left
             self.addSubview(classmateSeatNumberLabel!)
@@ -50,7 +53,8 @@ class ClassmateTableViewCell: UITableViewCell {
     
     private func initialClassmateName(_ classmateName:String? ){
         if classmateNameLabel == nil {
-            classmateNameLabel = UILabel.init(frame: CGRect(x: 40, y: 0, width: 100, height: 45))
+            classmateNameLabel = UILabel.init(frame: CGRect(x: 40, y: 0, width:self.frame.size.width*0.2, height: 45))
+            classmateNameLabel!.font = UIFont.systemFont(ofSize: 12.0)
             classmateNameLabel!.textColor = .black
             classmateNameLabel!.textAlignment = .center
             self.addSubview(classmateNameLabel!)
@@ -59,14 +63,15 @@ class ClassmateTableViewCell: UITableViewCell {
             self.classmateNameLabel!.text = name
         }
         else{
-            self.classmateNameLabel!.text = "（無名氏）"
+            self.classmateNameLabel!.text = "??"
         }
     }
     
     private func initialClassmateClass(_ classmateClass:String? ){
         if classmateClassLabel == nil{
             classmateClassLabel = UILabel.init(frame: CGRect(x: classmateNameLabel!.frame.origin.x + classmateNameLabel!.frame.size.width + 12,
-                                                             y: 0, width: 100, height: 45))
+                                                             y: 0, width:self.frame.size.width*0.2, height: 45))
+            classmateClassLabel!.font = UIFont.systemFont(ofSize: 12.0)
             classmateClassLabel!.textColor = .black
             classmateClassLabel!.textAlignment = .center
             self.addSubview(classmateClassLabel!)
@@ -75,14 +80,15 @@ class ClassmateTableViewCell: UITableViewCell {
             self.classmateClassLabel!.text = classmateClass
         }
         else{
-            self.classmateClassLabel!.text = "（無班級）"
+            self.classmateClassLabel!.text = "?"
         }
     }
     
     private func initialClassmateBirthday(_ classmateBirthday:String? ){
         if classmateBirthdayLabel == nil {
             classmateBirthdayLabel = UILabel.init(frame: CGRect(x: classmateClassLabel!.frame.origin.x + classmateClassLabel!.frame.size.width + 12,
-                                                                y: 0, width: 120, height: 45))
+                                                                y: 0, width:self.frame.size.width*0.3, height: 45))
+            classmateBirthdayLabel!.font = UIFont.systemFont(ofSize: 12.0)
             classmateBirthdayLabel!.textColor = .black
             classmateBirthdayLabel!.textAlignment = .right
             self.addSubview(classmateBirthdayLabel!)

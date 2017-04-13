@@ -16,7 +16,8 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
     
 //    @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tempClassmate: Classmate = classroomAArray[indexPath.row]
+        let totalClassmates = classroomAArray + classroomBArray
+        let tempClassmate: Classmate = totalClassmates[indexPath.row]
         var tableViewCell = tableView.dequeueReusableCell(withIdentifier: K_CLASSMATE_TABLEVIEWCELL_IDENTIFY) as! ClassmateTableViewCell?
         if tableViewCell != nil {
             tableViewCell?.setClassmate(indexPath.row + 1 , tempClassmate.name, tempClassmate.classroom, tempClassmate.birthday)
@@ -32,7 +33,7 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
 
     @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return classroomAArray.count
+        return classroomAArray.count + classroomBArray.count
     }
 
     
@@ -70,6 +71,7 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
     }
     
     private func initialClassrooms(){
+        
         for _ in 1...40{
             let classroomA_Classmate = Classmate.init()
             let classroomB_Classmate = Classmate.init()
