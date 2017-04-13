@@ -12,30 +12,7 @@ protocol Lesson2View_Protocol {
     func pressedButton(sender:Any)
 }
 
-class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
-    
-//    @available(iOS 2.0, *)
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let totalClassmates = classroomAArray + classroomBArray
-        let tempClassmate: Classmate = totalClassmates[indexPath.row]
-        var tableViewCell = tableView.dequeueReusableCell(withIdentifier: K_CLASSMATE_TABLEVIEWCELL_IDENTIFY) as! ClassmateTableViewCell?
-        if tableViewCell != nil {
-            tableViewCell?.setClassmate(indexPath.row + 1 , tempClassmate.name, tempClassmate.classroom, tempClassmate.birthday)
-        }
-        else{
-            tableViewCell = ClassmateTableViewCell.init(classmateSeatNumber:indexPath.row + 1,
-                                                        classmateName: tempClassmate.name,
-                                                        classmateClass: tempClassmate.classroom, 
-                                                        classmateBirthday: tempClassmate.birthday)
-        }
-        return tableViewCell!
-    }
-
-    @available(iOS 2.0, *)
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return classroomAArray.count + classroomBArray.count
-    }
-
+class Lesson2View : UIView {
     
     var button: UIButton!
     var classmateTableView: UITableView!
@@ -57,10 +34,12 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
-    // MARK: Public
-    private func initialUI() -> Void {
-    
+}
+
+private extension Lesson2View{
+    // MARK: initial
+    func initialUI() -> Void {
+        
         self.createUITableView()
         self.createButton()
         
@@ -70,7 +49,7 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
         self.addAction()
     }
     
-    private func initialClassrooms(){
+    func initialClassrooms(){
         
         for _ in 1...40{
             let classroomA_Classmate = Classmate.init()
@@ -80,14 +59,7 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
         }
     }
     
-    func addAction() -> Void {
-        self.button.addTarget(self,
-                              action:#selector(self.pressedButton(sender:)),
-                              for: UIControlEvents.touchUpInside)
-    }
-    
-    // MARK: initial    
-    private func createButton(){
+    func createButton(){
         button = UIButton.init(frame: CGRect(x: 0,
                                              y:classmateTableView.frame.origin.y + classmateTableView.frame.size.height ,
                                              width:self.frame.size.width,
@@ -98,7 +70,7 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
         button.setTitleColor(UIColor.blue, for: UIControlState.normal )
     }
     
-    private func createUITableView(){
+    func createUITableView(){
         classmateTableView = UITableView.init(frame: CGRect(x: 0,
                                                             y:UIApplication.shared.statusBarFrame.size.height,
                                                             width:self.frame.size.width ,
@@ -107,9 +79,40 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
         classmateTableView.dataSource = self
     }
     
-    // MARK: Response
-    func pressedButton( sender:Any ){
-        delegate?.pressedButton( sender: sender )
+    func addAction() -> Void {
+        self.button.addTarget(self,
+                              action:#selector(self.pressedButton(sender:)),
+                              for: UIControlEvents.touchUpInside)
     }
     
+    // MARK: Response
+    @objc func pressedButton( sender:Any ){
+        delegate?.pressedButton( sender: sender )
+    }
+}
+
+// MARK: UITableView Delegate
+extension Lesson2View: UITableViewDelegate , UITableViewDataSource{
+    //    @available(iOS 2.0, *)
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let totalClassmates = classroomAArray + classroomBArray
+        let tempClassmate: Classmate = totalClassmates[indexPath.row]
+        var tableViewCell = tableView.dequeueReusableCell(withIdentifier: K_CLASSMATE_TABLEVIEWCELL_IDENTIFY) as! ClassmateTableViewCell?
+        
+        if tableViewCell != nil {
+            tableViewCell?.setClassmate(indexPath.row + 1 , tempClassmate.name, tempClassmate.classroom, tempClassmate.birthday)
+        }
+        else{
+            tableViewCell = ClassmateTableViewCell.init(classmateSeatNumber:indexPath.row + 1,
+                                                        classmateName: tempClassmate.name,
+                                                        classmateClass: tempClassmate.classroom, 
+                                                        classmateBirthday: tempClassmate.birthday)
+        }
+        return tableViewCell!
+    }
+    
+    @available(iOS 2.0, *)
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return classroomAArray.count + classroomBArray.count
+    }
 }

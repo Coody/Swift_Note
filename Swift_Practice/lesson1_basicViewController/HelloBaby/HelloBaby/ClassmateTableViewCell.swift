@@ -10,8 +10,6 @@ import UIKit
 
 let K_CLASSMATE_TABLEVIEWCELL_IDENTIFY = "K_CLASSMATE_TABLEVIEWCELL_IDENTIFY"
 
-
-
 class ClassmateTableViewCell: UITableViewCell {
     
     var classmateSeatNumberLabel: UILabel?
@@ -19,6 +17,7 @@ class ClassmateTableViewCell: UITableViewCell {
     var classmateClassLabel:UILabel?
     var classmateBirthdayLabel: UILabel?
     
+    // MARK: 初始化
     convenience init(classmateSeatNumber:Int! , classmateName:String! , classmateClass:String! , classmateBirthday:String! ){
         self.init( style:UITableViewCellStyle.default , reuseIdentifier:K_CLASSMATE_TABLEVIEWCELL_IDENTIFY )
         self.frame = UIScreen.main.bounds
@@ -39,8 +38,18 @@ class ClassmateTableViewCell: UITableViewCell {
         self.initialClassmateClass(classmateClass)
         self.initialClassmateBirthday(classmateBirthday)
     }
-    
-    private func initialClassmateSeatNumber(_ classmateSeatNumber:Int! ){
+}
+
+/**
+ *
+ * 關於在 Objective-C 的 Category 可以使用命名讓 Category 功能區別，
+ * 在 swift 的 Extension 的命名呢？可以參考這篇文章：
+ * http://stackoverflow.com/questions/26319660/whats-the-best-practice-for-naming-swift-files-that-add-extensions-to-existing
+ *
+ */
+private extension ClassmateTableViewCell{
+    // MARK: private
+    func initialClassmateSeatNumber(_ classmateSeatNumber:Int! ){
         if classmateSeatNumberLabel == nil {
             classmateSeatNumberLabel = UILabel.init(frame: CGRect(x: 12, y: 0, width:self.frame.size.width*0.1, height: 45))
             classmateSeatNumberLabel!.font = UIFont.systemFont(ofSize: 12.0)
@@ -51,7 +60,7 @@ class ClassmateTableViewCell: UITableViewCell {
         self.classmateSeatNumberLabel!.text = String(classmateSeatNumber)
     }
     
-    private func initialClassmateName(_ classmateName:String? ){
+    func initialClassmateName(_ classmateName:String? ){
         if classmateNameLabel == nil {
             classmateNameLabel = UILabel.init(frame: CGRect(x: 40, y: 0, width:self.frame.size.width*0.2, height: 45))
             classmateNameLabel!.font = UIFont.systemFont(ofSize: 12.0)
@@ -67,7 +76,7 @@ class ClassmateTableViewCell: UITableViewCell {
         }
     }
     
-    private func initialClassmateClass(_ classmateClass:String? ){
+    func initialClassmateClass(_ classmateClass:String? ){
         if classmateClassLabel == nil{
             classmateClassLabel = UILabel.init(frame: CGRect(x: classmateNameLabel!.frame.origin.x + classmateNameLabel!.frame.size.width + 12,
                                                              y: 0, width:self.frame.size.width*0.2, height: 45))
@@ -84,7 +93,7 @@ class ClassmateTableViewCell: UITableViewCell {
         }
     }
     
-    private func initialClassmateBirthday(_ classmateBirthday:String? ){
+    func initialClassmateBirthday(_ classmateBirthday:String? ){
         if classmateBirthdayLabel == nil {
             classmateBirthdayLabel = UILabel.init(frame: CGRect(x: classmateClassLabel!.frame.origin.x + classmateClassLabel!.frame.size.width + 12,
                                                                 y: 0, width:self.frame.size.width*0.3, height: 45))
@@ -100,4 +109,5 @@ class ClassmateTableViewCell: UITableViewCell {
             self.classmateBirthdayLabel!.text = "2000/01/01"
         }
     }
+
 }
