@@ -12,14 +12,15 @@ let K_CLASSMATE_TABLEVIEWCELL_IDENTIFY = "K_CLASSMATE_TABLEVIEWCELL_IDENTIFY"
 
 class ClassmateTableViewCell: UITableViewCell {
     
+    var classmateSeatNumberLabel: UILabel?
     var classmateNameLabel: UILabel?
     var classmateClassLabel:UILabel?
     var classmateBirthdayLabel: UILabel?
     
-    convenience init( classmateName:String! , classmateClass:String! , classmateBirthday:String! ){
+    convenience init(classmateSeatNumber:Int! , classmateName:String! , classmateClass:String! , classmateBirthday:String! ){
         self.init( style:UITableViewCellStyle.default , reuseIdentifier:K_CLASSMATE_TABLEVIEWCELL_IDENTIFY )
         self.frame = UIScreen.main.bounds
-        self.setClassmate(classmateName, classmateClass, classmateBirthday)
+        self.setClassmate(classmateSeatNumber, classmateName, classmateClass, classmateBirthday)
     }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?){
@@ -30,15 +31,26 @@ class ClassmateTableViewCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
     
-    public func setClassmate(_ classmateName:String? ,_ classmateClass:String? ,_ classmateBirthday:String? ){
+    public func setClassmate(_ classmateSeatNumber:Int! , _ classmateName:String? ,_ classmateClass:String? ,_ classmateBirthday:String? ){
+        self.initialClassmateSeatNumber(classmateSeatNumber)
         self.initialClassmateName(classmateName)
         self.initialClassmateClass(classmateClass)
         self.initialClassmateBirthday(classmateBirthday)
     }
     
+    private func initialClassmateSeatNumber(_ classmateSeatNumber:Int! ){
+        if classmateSeatNumberLabel == nil {
+            classmateSeatNumberLabel = UILabel.init(frame: CGRect(x: 12, y: 0, width: 30, height: 45))
+            classmateSeatNumberLabel!.textColor = .black
+            classmateSeatNumberLabel!.textAlignment = .left
+            self.addSubview(classmateSeatNumberLabel!)
+        }
+        self.classmateSeatNumberLabel!.text = String(classmateSeatNumber)
+    }
+    
     private func initialClassmateName(_ classmateName:String? ){
         if classmateNameLabel == nil {
-            classmateNameLabel = UILabel.init(frame: CGRect(x: 12, y: 0, width: 120, height: 45))
+            classmateNameLabel = UILabel.init(frame: CGRect(x: 40, y: 0, width: 100, height: 45))
             classmateNameLabel!.textColor = .black
             classmateNameLabel!.textAlignment = .center
             self.addSubview(classmateNameLabel!)
@@ -54,7 +66,7 @@ class ClassmateTableViewCell: UITableViewCell {
     private func initialClassmateClass(_ classmateClass:String? ){
         if classmateClassLabel == nil{
             classmateClassLabel = UILabel.init(frame: CGRect(x: classmateNameLabel!.frame.origin.x + classmateNameLabel!.frame.size.width + 12,
-                                                             y: 0, width: 50, height: 45))
+                                                             y: 0, width: 100, height: 45))
             classmateClassLabel!.textColor = .black
             classmateClassLabel!.textAlignment = .center
             self.addSubview(classmateClassLabel!)

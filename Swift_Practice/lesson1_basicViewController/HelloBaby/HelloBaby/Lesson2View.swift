@@ -19,10 +19,11 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
         let tempClassmate: Classmate = classroomAArray[indexPath.row]
         var tableViewCell = tableView.dequeueReusableCell(withIdentifier: K_CLASSMATE_TABLEVIEWCELL_IDENTIFY) as! ClassmateTableViewCell?
         if tableViewCell != nil {
-            tableViewCell?.setClassmate(tempClassmate.name, tempClassmate.classroom, tempClassmate.birthday)
+            tableViewCell?.setClassmate(indexPath.row , tempClassmate.name, tempClassmate.classroom, tempClassmate.birthday)
         }
         else{
-            tableViewCell = ClassmateTableViewCell.init(classmateName: tempClassmate.name,
+            tableViewCell = ClassmateTableViewCell.init(classmateSeatNumber:indexPath.row,
+                                                        classmateName: tempClassmate.name,
                                                         classmateClass: tempClassmate.classroom, 
                                                         classmateBirthday: tempClassmate.birthday)
         }
@@ -97,7 +98,10 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
     }
     
     private func createUITableView(){
-        classmateTableView = UITableView.init(frame: CGRect(x: 0, y: 0, width:self.frame.size.width , height: self.frame.size.height - 45))
+        classmateTableView = UITableView.init(frame: CGRect(x: 0,
+                                                            y:UIApplication.shared.statusBarFrame.size.height,
+                                                            width:self.frame.size.width ,
+                                                            height: self.frame.size.height - 45 - UIApplication.shared.statusBarFrame.size.height))
         classmateTableView.delegate = self
         classmateTableView.dataSource = self
     }
