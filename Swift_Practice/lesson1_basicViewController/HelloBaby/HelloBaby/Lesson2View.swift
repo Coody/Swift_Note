@@ -16,19 +16,30 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
     
 //    @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var tableViewCell = ClassmateTableViewCell.init()
-        return tableViewCell
+        let tempClassmate: Classmate = classroomAArray[indexPath.row]
+        var tableViewCell = tableView.dequeueReusableCell(withIdentifier: K_CLASSMATE_TABLEVIEWCELL_IDENTIFY) as! ClassmateTableViewCell?
+        if tableViewCell != nil {
+            tableViewCell?.setClassmate(tempClassmate.name, tempClassmate.classroom, tempClassmate.birthday)
+        }
+        else{
+            tableViewCell = ClassmateTableViewCell.init(classmateName: tempClassmate.name,
+                                                        classmateClass: tempClassmate.classroom, 
+                                                        classmateBirthday: tempClassmate.birthday)
+        }
+        return tableViewCell!
     }
 
     
     @available(iOS 2.0, *)
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return classroomAArray.count
     }
 
     
     var button: UIButton!
     var classmateTableView: UITableView!
+    var classroomAArray: Array<Classmate>! = [Classmate]()
+    var classroomBArray: Array<Classmate>! = [Classmate]()
     
     var delegate:Lesson2View_Protocol?
     
@@ -39,6 +50,7 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
     override init(frame: CGRect) {
         super.init( frame:frame )
         self.initialUI()
+        self.initialClassrooms()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -46,14 +58,24 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
     }
     
     // MARK: Public
-    func initialUI() -> Void {
+    private func initialUI() -> Void {
     
         self.createUITableView()
         self.createButton()
         
+        self.addSubview(classmateTableView)
         self.addSubview(button)
         
         self.addAction()
+    }
+    
+    private func initialClassrooms(){
+        for _ in 1...40{
+            let classroomA_Classmate = Classmate.init()
+            let classroomB_Classmate = Classmate.init()
+            classroomAArray.append(classroomA_Classmate)
+            classroomBArray.append(classroomB_Classmate)
+        }
     }
     
     func addAction() -> Void {

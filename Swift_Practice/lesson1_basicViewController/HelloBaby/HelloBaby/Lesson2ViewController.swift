@@ -34,7 +34,7 @@ class Lesson2ViewController : UIViewController{
 extension Lesson2ViewController : Lesson2View_Protocol{
     
     func pressedButton(sender: Any) {
-        self.mainView.label.text = self.mainView.textField.text
+        
     }
     
 }
