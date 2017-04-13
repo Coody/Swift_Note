@@ -12,23 +12,10 @@ protocol Lesson2View_Protocol {
     func pressedButton(sender:Any)
 }
 
-class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
+class Lesson2View : UIView {
     
-    @available(iOS 2.0, *)
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        return nil
-    }
-
-    
-    @available(iOS 2.0, *)
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-
-    
     var button: UIButton!
-    var classmateTableView: UITableView!
     
     var delegate:Lesson2View_Protocol?
     
@@ -48,7 +35,6 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
     // MARK: Public
     func initialUI() -> Void {
     
-        self.createUITableView()
         self.createButton()
         
         self.addSubview(button)
@@ -64,8 +50,8 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
     
     // MARK: initial    
     private func createButton(){
-        button = UIButton.init(frame: CGRect(x: 0,
-                                             y:classmateTableView.frame.origin.y + classmateTableView.frame.size.height ,
+        button = UIButton.init(frame: CGRect(x:0,
+                                             y:0 ,
                                              width:self.frame.size.width,
                                              height:45))
         button.layer.cornerRadius = 5.0
@@ -73,13 +59,7 @@ class Lesson2View : UIView , UITableViewDelegate , UITableViewDataSource {
         button.setTitle("確定", for: UIControlState.normal )
         button.setTitleColor(UIColor.blue, for: UIControlState.normal )
     }
-    
-    private func createUITableView(){
-        classmateTableView = UITableView.init(frame: CGRect(x: 0, y: 0, width:self.frame.size.width , height: self.frame.size.height - 45))
-        classmateTableView.delegate = self
-        classmateTableView.dataSource = self
-    }
-    
+        
     // MARK: Response
     func pressedButton( sender:Any ){
         delegate?.pressedButton( sender: sender )
