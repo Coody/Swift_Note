@@ -33,5 +33,7 @@
 
 [Apple's 官方文件](https://developer.apple.com/library/prerelease/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html#//apple_ref/doc/uid/TP40014097-CH5-ID309) <- 詳細導讀或是查詢資料用
 
+[開始課程，Lesson 1 Basic ViewController](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson1_basicViewController)
+
 # License
 版權 ```MIT``` 請自行取用
