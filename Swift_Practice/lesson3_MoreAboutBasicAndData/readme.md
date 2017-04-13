@@ -237,6 +237,8 @@ enum Optional {
 2. UITableView
 3. 何時使用 ? ! 的概念
 
+[--> 下一課，Lesson 4 再論 func , 閉包(Closure) ](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson4_DeepFuncAndClosure)
+
 # License
 MIT
 
