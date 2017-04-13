@@ -215,6 +215,8 @@ myFunc( "Milo" , "I'm a really old wizard" )  // 第二個 param 可以不用 ag
 2. Delegate 基本用法
 3. Category 基本用法
 
+[--> 下一課，Lesson 3 Array , Dictionary , Set , 再論 var](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson3_MoreAboutBasicAndData)
+
 -
 # License
 MIT
