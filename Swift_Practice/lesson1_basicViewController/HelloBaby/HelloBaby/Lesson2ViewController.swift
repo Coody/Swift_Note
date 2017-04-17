@@ -38,3 +38,28 @@ extension Lesson2ViewController : Lesson2View_Protocol{
     }
     
 }
+
+
+extension Date{
+    static func getBirthdayString(_ dateBetween365: Int?) -> String {
+        let month = [31,28,31,30,31,30,31,31,30,31,30,31]
+        
+        func dateString(_ dateInt: Int ) -> String {
+            var total = 0
+            for (index , element) in month.enumerated() {
+                total = total + element
+                if total > dateInt {
+                    return ("\(index + 1) 月 \(dateInt - (total - element))日")
+                }
+            }
+            return ""
+        }
+        
+        if let checkDate = dateBetween365 {
+            return dateString(checkDate)
+        }
+        else{
+            return dateString((Int)(arc4random()%365) + 1)
+        }
+    }
+}

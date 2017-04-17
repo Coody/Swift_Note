@@ -106,7 +106,7 @@ private extension ClassmateTableViewCell{
             self.classmateBirthdayLabel!.text = classmateBirthday
         }
         else{
-            self.classmateBirthdayLabel!.text = "2000/01/01"
+            self.classmateBirthdayLabel!.text = "??"
         }
     }
 

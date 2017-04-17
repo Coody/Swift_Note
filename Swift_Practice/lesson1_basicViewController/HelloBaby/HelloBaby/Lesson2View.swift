@@ -52,8 +52,8 @@ private extension Lesson2View{
     func initialClassrooms(){
         
         for _ in 1...40{
-            let classroomA_Classmate = Classmate.init()
-            let classroomB_Classmate = Classmate.init()
+            let classroomA_Classmate = Classmate.init( nil,nil,Date.getBirthdayString(nil))
+            let classroomB_Classmate = Classmate.init( nil,nil,Date.getBirthdayString(nil))
             classroomAArray.append(classroomA_Classmate)
             classroomBArray.append(classroomB_Classmate)
         }
