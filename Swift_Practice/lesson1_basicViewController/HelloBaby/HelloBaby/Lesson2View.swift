@@ -28,7 +28,6 @@ class Lesson2View : UIView {
     override init(frame: CGRect) {
         super.init( frame:frame )
         self.initialUI()
-        self.initialClassrooms()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -47,16 +46,6 @@ private extension Lesson2View{
         self.addSubview(button)
         
         self.addAction()
-    }
-    
-    func initialClassrooms(){
-        
-        for _ in 1...40{
-            let classroomA_Classmate = Classmate.init( nil,nil,Date.getBirthdayString(nil))
-            let classroomB_Classmate = Classmate.init( nil,nil,Date.getBirthdayString(nil))
-            classroomAArray.append(classroomA_Classmate)
-            classroomBArray.append(classroomB_Classmate)
-        }
     }
     
     func createButton(){

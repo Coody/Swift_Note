@@ -8,10 +8,17 @@
 
 import UIKit
 
+enum ClassroomViewMode {
+    case Total
+    case GetTheSameBirthday
+}
+
 class Lesson2ViewController : UIViewController{
     
     // MARK: init
     var mainView:Lesson2View!
+    
+    var classroomViewMode = ClassroomViewMode.Total
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +26,9 @@ class Lesson2ViewController : UIViewController{
         mainView = Lesson2View.init(frame: self.view.frame)
         mainView.delegate = self;
         self.view.addSubview(mainView)
-        
         self.view.backgroundColor = UIColor.lightGray
+        
+        self.initialClassrooms()
         
     }
     
@@ -30,10 +38,33 @@ class Lesson2ViewController : UIViewController{
     
 }
 
+extension Lesson2ViewController{
+    func initialClassrooms(){
+        for _ in 1...40{
+            let classroomA_Classmate = Classmate.init( nil,nil,Date.getBirthdayString(nil))
+            let classroomB_Classmate = Classmate.init( nil,nil,Date.getBirthdayString(nil))
+            mainView.classroomAArray.append(classroomA_Classmate)
+            mainView.classroomBArray.append(classroomB_Classmate)
+        }
+    }
+}
+
 
 extension Lesson2ViewController : Lesson2View_Protocol{
     
     func pressedButton(sender: Any) {
+        
+        switch classroomViewMode {
+        case .Total:
+            classroomViewMode = .GetTheSameBirthday
+            let birthdaySetA = Set(mainView.classroomAArray.flatMap{ $0 as? Classmate})
+            let birthdaySetB = Set(mainView.classroomBArray as! [Classmate])
+            let theSameBirthdaySet = birthdaySetA.intersection(birthdaySetB)
+        case .GetTheSameBirthday:
+            classroomViewMode = .Total
+        default:
+            
+        }
         
     }
     
