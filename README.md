@@ -14,6 +14,8 @@
 * 教學一開始的專案內容會是空的（或是有錯誤），請自行修改後再自行編譯看看是否正確。
 * 如果要看該 Lesson 的解答，請直接轉到該 Lesson 的 branch 來看 code 的寫法。
 * 有任何問題，都歡迎在 issue 內直接進行討論。
+* 進階深度學習比較適合較資深的設計師來依照語言特性進行架構優化的學習項目或文章（對於 view 的處理可以比較不用著重），這部份將是留下連結，於課堂上討論、或是額外花時間了解吸收。
+
 # 課程
 * [Lesson 1 基本概念、ViewController 及 UIKit ](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson1_basicViewController)
 * [Lesson 2 Protocol , Extensions(Category) , Delegate ](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson2_delegateAndExtension)
@@ -21,6 +23,10 @@
 * [Lesson 4 再論 func , 閉包 ](https://github.com/Coody/Swift_Note/tree/master/Swift_Practice/lesson4_DeepFuncAndClosure)
 * <del>[Lesson 5 UITabBarController , UINavigationController]()
 * ...
+
+# 進階深度學習
+* [函數式 Swift](https://objccn.io/products/functional-swift/) <-- 69 人民幣
+* [Swift 進階](https://objccn.io/products/advanced-swift/)  <-- 69 人民幣
 
 # 學習資源
 [Swift 中文教學](https://tommy60703.gitbooks.io/swift-language-traditional-chinese/content/chapter1/chapter1.html) <- 版本可能舊一點，但初學語法或是問題查詢應該沒啥大問題
